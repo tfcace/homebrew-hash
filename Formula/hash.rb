@@ -1,8 +1,8 @@
 class Hash < Formula
   desc "AI-powered shell with ACP integration"
   homepage "https://github.com/tfcace/hash"
-  url "https://github.com/tfcace/hash/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "11e1fbd73ca01c3cef3f4bd2967b407a5e0785613955f4686d6582ffdbad9d2e"
+  url "https://github.com/tfcace/hash/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "5b4686675b0355ff6f1f77a8af085157d56b6ab833d2b02ff8ae0f505484cc01"
   license "MIT"
 
   depends_on "go" => :build
