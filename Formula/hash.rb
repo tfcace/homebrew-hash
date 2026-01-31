@@ -1,21 +1,31 @@
 class Hash < Formula
   desc "AI-powered shell with ACP integration"
   homepage "https://github.com/tfcace/hash"
-  url "https://github.com/tfcace/hash/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "5b4686675b0355ff6f1f77a8af085157d56b6ab833d2b02ff8ae0f505484cc01"
   license "MIT"
+  version "0.4.3"
 
-  depends_on "go" => :build
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/tfcace/hash/releases/download/v0.4.3/hash_v0.4.3_darwin_arm64.tar.gz"
+      sha256 ""
+    else
+      url "https://github.com/tfcace/hash/releases/download/v0.4.3/hash_v0.4.3_darwin_amd64.tar.gz"
+      sha256 ""
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/tfcace/hash/releases/download/v0.4.3/hash_v0.4.3_linux_arm64.tar.gz"
+      sha256 ""
+    else
+      url "https://github.com/tfcace/hash/releases/download/v0.4.3/hash_v0.4.3_linux_amd64.tar.gz"
+      sha256 ""
+    end
+  end
 
   def install
-    commit = `git rev-parse --short HEAD`.strip
-    ldflags = %W[
-      -X github.com/tfcace/hash/internal/version.Version=#{version}
-      -X github.com/tfcace/hash/internal/version.GitCommit=#{commit}
-      -X github.com/tfcace/hash/internal/version.JjChange=unknown
-      -X github.com/tfcace/hash/internal/version.BuildDate=#{Time.now.utc.strftime("%Y-%m-%d")}
-    ]
-    system "go", "build", *std_go_args(ldflags:), "./cmd/hash"
+    bin.install "hash"
   end
 
   def caveats
