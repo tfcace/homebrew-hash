@@ -2,25 +2,25 @@ class Hash < Formula
   desc "AI-powered shell with ACP integration"
   homepage "https://github.com/tfcace/hash"
   license "MIT"
-  version "0.7.0"
+  version "0.7.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tfcace/hash/releases/download/v0.7.0/hash_v0.7.0_darwin_arm64.tar.gz"
-      sha256 "800d5e238d4306af5b344fa2de7b198d3f273279af2a5d99040f27e35624710f"
+      url "https://github.com/tfcace/hash/releases/download/v0.7.1/hash_v0.7.1_darwin_arm64.tar.gz"
+      sha256 "5688d75cfad4076b39c0243dead852bf2642e260ec6665227e22b85a964899c7"
     else
-      url "https://github.com/tfcace/hash/releases/download/v0.7.0/hash_v0.7.0_darwin_amd64.tar.gz"
-      sha256 "786cc330fe41cfd78ac6bc4b582fbdc6f107e5fc14b147a9f443d0254e2b5ae9"
+      url "https://github.com/tfcace/hash/releases/download/v0.7.1/hash_v0.7.1_darwin_amd64.tar.gz"
+      sha256 "a3d9df418054993a2d21fa5b48c1025e50b1d73235a4f53d106e3cd28334a69e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/tfcace/hash/releases/download/v0.7.0/hash_v0.7.0_linux_arm64.tar.gz"
-      sha256 "7fa5eb6bdd58e2ca8c34f22101c9cdeada4366f50829e65975752ddc8156f9c2"
+      url "https://github.com/tfcace/hash/releases/download/v0.7.1/hash_v0.7.1_linux_arm64.tar.gz"
+      sha256 "03eba310564285eaf8b607cc851e1eaab4415d13afedf5828f34c86b519f9d43"
     else
-      url "https://github.com/tfcace/hash/releases/download/v0.7.0/hash_v0.7.0_linux_amd64.tar.gz"
-      sha256 "52120144157fbdb41c2a995e505964225fa697983fd6c3943e9919efc074cbfc"
+      url "https://github.com/tfcace/hash/releases/download/v0.7.1/hash_v0.7.1_linux_amd64.tar.gz"
+      sha256 "87017916ee54d2c5ae9a22881f7bf2857979ca47b62e31e43c3407ee81e8fe84"
     end
   end
 
